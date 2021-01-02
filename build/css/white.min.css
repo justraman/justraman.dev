@@ -367,11 +367,7 @@
     border: none;
     background-color: #e3e3e3;
   }
-  .post-content-inner pre {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 1.6;
-  }
+
   .post-content-inner h2,
   h3,
   h4,
@@ -421,9 +417,7 @@
   pre .hljs {
     border-radius: 8px;
   }
-  code,
   kbd,
-  pre,
   samp {
     font-size: 1em;
     font-weight: normal;
@@ -438,19 +432,6 @@
     font-family: hack-regular, hack-italic, hack-bold, hack-bolditalic;
   }
   .hljs,
-  code {
-    font-weight: normal;
-  }
-  code {
-    font-size: 0.8em;
-    font-weight: 1000;
-    background-color: #DDF0FF;
-    color: #1A98FF;
-    border-radius: 5px;
-    padding: 4px 6px;
-    margin: 0px 4px;
-    font-family: hack-regular, hack-italic, hack-bold, hack-bolditalic;
-  }
   .toc-top {
     border: 1px solid #e3e3e3;
     border-radius: 4px;
@@ -648,6 +629,9 @@
     }
     .menu-li {
       display: none;
+    }
+    .intro-title{
+      font-size: 2.5rem;
     }
     #mobile-menu {
       display: block;

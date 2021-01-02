@@ -2,23 +2,28 @@
 
 {% block body %}
 
-<header class="page-header">
-  <h1 class="page-header-title">{{ title }}</h1>
-  <p class="page-header-sub-title"> <span style="color: blue;">{{author}}</span> on {{ date }}</p>
-</header>
-
-<a href="{{ site.base_url }}">⬅ Home</a>
-
-
 <article class="post-inner">
   <div class="post-content-outer">
     <div class="post-content-inner ">
-      <div class="post-content-main animate__animated  animate__fadeInUp">
+      {% if cover %}<div class="post-intro">{% else %}<div class="post-intro-no-cover">{% endif %}
+          <div class="post-title animate__animated  animate__fadeInUp">
+           {{title}}
+          </div>
+          <div class="meta-intro animate__animated  animate__fadeInUp"><span class="intro-span">
+             {{date.toLocaleDateString(undefined,{ weekday: 'long', year: 'numeric', month: 'long', day:
+             'numeric' })}}
+            </span></div>
+          {% if cover %}
+          <div class="post-cover animate__animated  animate__fadeInUp"><img src="{{cover}}}"
+              class="post-cover-img"></div>
+          {% endif %}
+        </div>
+        <div class="post-content-main animate__animated  animate__fadeInUp">
 
-        {{ contents | safe }}
+                {{ contents | safe }}
+        </div>
       </div>
     </div>
-  </div>
 </article>
 
 {% endblock %}
