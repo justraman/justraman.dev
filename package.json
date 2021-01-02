@@ -1,7 +1,6 @@
 {
-  "name": "profile_base",
-  "description": "A static site generator with metalsmith.",
-  "private": true,
+  "name": "justraman.dev",
+  "description": "Personal website",
   "version": "1.0.0",
   "main": "build.js",
   "scripts": {
@@ -9,7 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "firebase deploy --only hosting",
     "start": "http-server 'build/' -c-1 -o -p 8080",
-    "watch": "npm run build && chokidar 'build.js' 'data/**' 'lib/**' 'src/**' --command 'node ./build.js'"
+    "watch": "npm run build && npm run start && chokidar 'build.js' 'data/**' 'lib/**' 'src/**' --command 'node ./build.js'"
   },
   "devDependencies": {
     "chalk": "^2.1.0",
@@ -28,13 +27,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justraman/profile_base.git"
+    "url": "git+https://github.com/justraman/justraman.dev.git"
   },
   "author": "Raman Shekhawat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/justraman/profile_base/issues"
+    "url": "https://github.com/justraman/justraman.dev/issues"
   },
-  "homepage": "https://github.com/justraman/profile_base#readme",
+  "homepage": "https://github.com/justraman/justraman.dev#readme",
   "dependencies": {}
 }
