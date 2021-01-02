@@ -1,0 +1,14 @@
+{% extends "views/default.html" %}
+{% from "components/page-header.html" import pageHeader %}
+
+{% block body %}
+{{ pageHeader(title=title, subtitle='') }}
+
+
+<section>
+  {{ contents | safe }}
+</section>
+
+
+</div>
+{% endblock %}

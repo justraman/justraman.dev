@@ -1,0 +1,40 @@
+{
+  "name": "profile_base",
+  "description": "A static site generator with metalsmith.",
+  "private": true,
+  "version": "1.0.0",
+  "main": "build.js",
+  "scripts": {
+    "build": "node ./build.js",
+    "predeploy": "npm run build",
+    "deploy": "firebase deploy --only hosting",
+    "start": "http-server 'build/' -c-1 -o -p 8080",
+    "watch": "npm run build && chokidar 'build.js' 'data/**' 'lib/**' 'src/**' --command 'node ./build.js'"
+  },
+  "devDependencies": {
+    "chalk": "^2.1.0",
+    "chokidar-cli": "^1.2.0",
+    "http-server": "^0.10.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-in-place": "^1.4.4",
+    "metalsmith-layouts": "^1.8.1",
+    "metalsmith-markdown": "^0.2.2",
+    "metalsmith-metadata": "0.0.4",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-prism": "^3.1.1",
+    "nunjucks": "^3.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justraman/profile_base.git"
+  },
+  "author": "Raman Shekhawat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justraman/profile_base/issues"
+  },
+  "homepage": "https://github.com/justraman/profile_base#readme",
+  "dependencies": {}
+}

@@ -1,0 +1,24 @@
+{% extends "views/default.html" %}
+
+{% block body %}
+
+<header class="page-header">
+  <h1 class="page-header-title">{{ title }}</h1>
+  <p class="page-header-sub-title"> <span style="color: blue;">{{author}}</span> on {{ date }}</p>
+</header>
+
+<a href="{{ site.base_url }}">⬅ Home</a>
+
+
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-content-inner ">
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+
+        {{ contents | safe }}
+      </div>
+    </div>
+  </div>
+</article>
+
+{% endblock %}
