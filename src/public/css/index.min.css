@@ -16,3 +16,9 @@
     color: #1A98FF;
     border-color: black;
 }
+
+.website {
+	font-weight: 800;
+	color: rgba(0, 0, 0,0.7);
+	font-family: 'Courier New', Courier, monospace;
+}
