@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }} | {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ site.base_url }}css/index.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <link rel="stylesheet" href="{{ site.base_url }}css/white.min.css">
-</head>
+    <link rel="stylesheet" href="{{ site.base_url }}css/index.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="{{ site.base_url }}css/white.min.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7DGV8HP9D4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<body>
+      gtag("config", "G-7DGV8HP9D4");
+    </script>
+  </head>
+
+  <body>
     {% include 'components/app-header.html' %}
     <div class="body-outer">
-        <div class="body-inner">
-            {% block body %}
-            {{ contents | safe }}
-            {% endblock %}
-        </div>
+      <div class="body-inner">
+        {% block body %} {{ contents | safe }} {% endblock %}
+      </div>
     </div>
-</body>
-<script src="/js/white.js"></script>
-
+  </body>
+  <script src="/js/white.js"></script>
 </html>
